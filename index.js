@@ -34,25 +34,25 @@ const cartItem = {
 };
 
 const itemNotFound = {
-    statusCode: '404',
+    statusCode: 404,
     error: 'Not Found',
     message: 'Item not found.'
 };
 
 const customerNotFound = {
-    statusCode: '404',
+    statusCode: 404,
     error: 'Not Found',
     message: 'Customer not found.'
 };
 
 const cartNotFound = {
-    statusCode: '404',
+    statusCode: 404,
     error: 'Not Found',
     message: 'Cart not found.'
 };
 
 const cartItemNotFound = {
-    statusCode: '404',
+    statusCode: 404,
     error: 'Not Found',
     message: 'Item not found in cart.'
 };
