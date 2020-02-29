@@ -10,8 +10,8 @@ const getCustomersCartsRoute = (server) => {
     path: '/customers/{customerID}/carts',
     method: 'GET',
     handler: (request, h) => {
-      const customerID = request.params.customerId;
-      const customer = getCustomerByCustomerId(customerId);
+      const customerID = request.params.customerID;
+      const customer = getCustomerByCustomerID(customerID);
       
       if (!customer) {
         return h.response().code(404);
