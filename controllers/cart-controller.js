@@ -15,10 +15,10 @@ const getCartsRoute = (server) => {
 
 const getCartByCartIDRoute = (server) => {
   server.route({
-    path: '/carts/{cartId}',
+    path: '/carts/{cartID}',
     method: 'GET',
     handler: (request, h) => {
-      const cart = getCartByCartID(request.params.cartId);
+      const cart = getCartByCartID(request.params.cartID);
       
       if (!cart) {
         return h.response().code(404);
