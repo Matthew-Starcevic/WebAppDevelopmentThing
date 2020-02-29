@@ -15,9 +15,8 @@ const selectCustomers = () => ({
   driver: 'postgres'
 });
 
-const selectCustomerByCustomerID = (customerID) => ({
+const selectCustomerByCustomerID = (customerID) =>
   customers.find((customer) => customer['customer_id'] === customerID);
-});
 
 module.exports = {
   selectCustomers,
