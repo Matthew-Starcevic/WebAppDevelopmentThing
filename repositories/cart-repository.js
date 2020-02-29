@@ -21,9 +21,8 @@ const selectCarts = () => ({
   driver: 'postgres'
 });
 
-const selectCartByCartID = (cartID) => ({
+const selectCartByCartID = (cartID) =>
   carts.find((cart) => cart['cart_id'] === cartID);
-});
 
 const selectCartsByCustomerID = (customerID) => ({
   rows: carts.filter((cart) => cart['customer_id'] === customerID)
