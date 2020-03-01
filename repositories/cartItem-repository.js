@@ -18,6 +18,11 @@ let cartItems = [
 const selectCartItemByCartItemID = (cartItemID) =>
   cartItems.find((cartItem) => cartItem['cart_item_id'] === cartItemID);
 
+const selectCartItemsByCartID = (cartID) => ({
+  rows: cartItems.filter((cartItem) => cartItem['in_cart'] === cartID)
+});
+
 module.exports = {
   selectCartItemByCartItemID
+  selectCartItemsByCartID
 };
