@@ -16,8 +16,8 @@ const getCartItemByCartItemID = (cartItemID) => {
 };
 
 const getCartItemsByCartID = (cartID) => {
-  const cartItem = selectCartItemsByCartID(cartID);
-  return mapToModel(cartItem);
+  const {rows} = selectCartItemsByCartID(cartID);
+  return rows.map(mapToModel);
 };
 
 module.exports = {
