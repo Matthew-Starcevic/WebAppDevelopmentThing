@@ -1,5 +1,6 @@
 const {
-  selectCartItemByCartItemID
+  selectCartItemByCartItemID,
+  selectCartItemsByCartID
 } = require('../repositories/cartItem-repository');
 
 const mapToModel = (cartItem) => ({
@@ -14,6 +15,12 @@ const getCartItemByCartItemID = (cartItemID) => {
   return mapToModel(cartItem);
 };
 
+const getCartItemsByCartID = (cartID) => {
+  const cartItem = selectCartItemsByCartID(cartID);
+  return mapToModel(cartItem);
+};
+
 module.exports = {
-  getCartItemByCartItemID
+  getCartItemByCartItemID,
+  getCartItemsByCartID
 };
