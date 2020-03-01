@@ -23,6 +23,6 @@ const selectCartItemsByCartID = (cartID) => ({
 });
 
 module.exports = {
-  selectCartItemByCartItemID
+  selectCartItemByCartItemID,
   selectCartItemsByCartID
 };
