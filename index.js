@@ -10,12 +10,11 @@ const init = async () => {
         host: 'localhost',
         port: 3000
     });
-    
+
     initCustomerControllers(server);
     initCartControllers(server);
     initItemControllers(server);
     initCartItemControllers(server);
-    
     await server.start();
     console.log('Server running on %s', server.info.uri);
 };
