@@ -1,31 +1,29 @@
 const {
   getAllItems,
   getItemByItemID
-} = require('../services/item-service')
+} = require('../services/item-service');
 
 const getItemsRoute = (server) => {
   server.route({
-    path: '/items',
+    handler: () => getAllItems(),
     method: 'GET',
-    handler: (request, h) => {
-      return getAllItems();
-    }
+    path: '/items'
   });
 };
 
 const getItemByItemIDRoute = (server) => {
   server.route({
-    path: '/items/{itemID}',
-    method: 'GET',
     handler: (request, h) => {
       const item = getItemByItemID(request.params.itemID);
-      
+
       if (!item) {
         return h.response().code(404);
       }
-      
+
       return item;
-    }
+    },
+    method: 'GET',
+    path: '/items/{itemID}'
   });
 };
 
