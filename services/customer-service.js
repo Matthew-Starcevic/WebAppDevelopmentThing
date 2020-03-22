@@ -5,9 +5,9 @@ const {
 
 const mapToModel = (customer) => ({
   customerID: customer['customer_id'],
+  email: customer['email'],
   firstName: customer['first_name'],
-  lastName: customer['last_name'],
-  email: customer['email']
+  lastName: customer['last_name']
 });
 
 const getAllCustomers = () => {
@@ -17,6 +17,11 @@ const getAllCustomers = () => {
 
 const getCustomerByCustomerID = (customerID) => {
   const customer = selectCustomerByCustomerID(customerID);
+
+  if (!customer) {
+    return null;
+  }
+
   return mapToModel(customer);
 };
 
