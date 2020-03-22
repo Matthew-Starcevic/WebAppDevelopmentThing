@@ -12,6 +12,7 @@ const mapToModel = (customer) => ({
 
 const getAllCustomers = () => {
   const {rows} = selectCustomers();
+
   return rows.map(mapToModel);
 };
 

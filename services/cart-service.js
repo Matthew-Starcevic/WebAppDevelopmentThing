@@ -11,16 +11,19 @@ const mapToModel = (cart) => ({
 
 const getAllCarts = () => {
   const {rows} = selectCarts();
+
   return rows.map(mapToModel);
 };
 
 const getCartByCartID = (cartID) => {
   const cart = selectCartByCartID(cartID);
+
   return mapToModel(cart);
 };
 
 const getCartsByCustomerID = (customerID) => {
   const {rows} = selectCartsByCustomerID(customerID);
+
   return rows.map(mapToModel);
 };
 
