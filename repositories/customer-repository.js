@@ -4,6 +4,12 @@ const customers = [
     'email': 'Dude.Withaname@drake.edu',
     'first_name': 'Dude',
     'last_name': 'Withaname'
+  },
+  {
+    'customer_id': '7f2bf2dd-1d68-4ad4-8778-59099af82fb5',
+    'email': 'Bob.Temmie@drake.edu',
+    'first_name': 'Bob',
+    'last_name': 'Temmie'
   }
 ];
 
