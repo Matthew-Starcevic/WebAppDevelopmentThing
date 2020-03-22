@@ -1,24 +1,16 @@
-const uuid = require('uuid');
-
-let carts = [
+const carts = [
   {
     'cart_id': '490215b7-ab53-450f-8ecf-b1c3e035c640',
-    'customer_id': 'd83ff143-9f8b-445a-8d8f-b9b8fe0f9f28',
-    'created_date': new Date(),
-    'purchased_date': new Date()
+    'customer_id': 'd83ff143-9f8b-445a-8d8f-b9b8fe0f9f28'
   },
   {
     'cart_id': '6997ddba-abd6-4547-8398-205d4d8946e8',
-    'customer_id': 'd83ff143-9f8b-445a-8d8f-b9b8fe0f9f28',
-    'created_date': new Date(),
-    'purchased_date': new Date()
+    'customer_id': 'd83ff143-9f8b-445a-8d8f-b9b8fe0f9f28'
   }
 ];
 
 const selectCarts = () => ({
-  rows: carts,
-  error: new Error(),
-  driver: 'postgres'
+  rows: carts
 });
 
 const selectCartByCartID = (cartID) =>
@@ -29,7 +21,7 @@ const selectCartsByCustomerID = (customerID) => ({
 });
 
 module.exports = {
-  selectCarts,
   selectCartByCartID,
+  selectCarts,
   selectCartsByCustomerID
 };
