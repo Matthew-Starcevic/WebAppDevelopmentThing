@@ -7,18 +7,14 @@ const {getCartItemsByCartID} = require('../services/cartItem-service');
 
 const getCartsRoute = (server) => {
   server.route({
-    path: '/carts',
+    handler: () => getAllCarts(),
     method: 'GET',
-    handler: (request, h) => {
-      return getAllCarts();
-    }
+    path: '/carts'
   });
 };
 
 const getCartByCartIDRoute = (server) => {
   server.route({
-    path: '/carts/{cartID}',
-    method: 'GET',
     handler: (request, h) => {
       const cart = getCartByCartID(request.params.cartID);
       
@@ -27,7 +23,9 @@ const getCartByCartIDRoute = (server) => {
       }
       
       return cart;
-    }
+    },
+    path: '/carts/{cartID}',
+    method: 'GET'
   });
 };
 
